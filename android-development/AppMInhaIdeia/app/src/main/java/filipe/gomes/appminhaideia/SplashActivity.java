@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 
 public class SplashActivity extends AppCompatActivity {
 
     String TAG = "APP_MINHA_IDEIA";
+
+    int waitingTime = 1000 * 5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +26,18 @@ public class SplashActivity extends AppCompatActivity {
     private void changeScreen() {
         Log.d(TAG, "switchScreens: Mudando de tela!");
 
-        Intent switchScreens = new Intent(SplashActivity.this, MainActivity.class);
-        // troca da tela SplashActivity para MainActivity
-        startActivity(switchScreens);
-        // finaliza a ação
-        finish();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                Log.d(TAG, "switchScreens: Esperando o tempo...");
+
+                Intent switchScreens = new Intent(SplashActivity.this, MainActivity.class);
+                // Troca da tela SplashActivity para MainActivity
+                startActivity(switchScreens);
+                // Finaliza a ação
+                finish();
+            }
+        }, waitingTime);
     }
 }
