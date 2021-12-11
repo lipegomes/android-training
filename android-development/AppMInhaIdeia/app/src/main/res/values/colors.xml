@@ -7,5 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="purple_500_MinhaIdeia">#FF6200EE</color>
+    <color name="purple_21094E_MainActivity">#21094E</color>
+    <color name="green_A5E1AD_MainActivity">#A5E1AD</color>
+    <color name="teal_A4CA1A3_MainActivity">#4CA1A3</color>
+    <color name="white_FFFFFFFF_MainActivity">#FFFFFFFF</color>
 </resources>
